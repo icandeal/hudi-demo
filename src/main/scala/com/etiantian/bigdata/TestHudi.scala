@@ -15,7 +15,6 @@ object TestHudi {
 
     import spark.implicits._
     import spark.sql
-    import scala.collection.convert.wrapAsScala._
     import org.apache.spark.sql.expressions.Window
     import org.apache.spark.sql.SaveMode
     import org.apache.hudi.DataSourceWriteOptions._
@@ -23,7 +22,6 @@ object TestHudi {
     import org.apache.hudi.config.HoodieWriteConfig.TABLE_NAME
     import java.time.LocalDateTime
     import java.time.format.DateTimeFormatter
-    import org.apache.hudi.QuickstartUtils.DataGenerator
 
     val tableName = "test_bd_video_logs"
     val basepath = "s3://aws-hadoop-test/test/hive/default/"
